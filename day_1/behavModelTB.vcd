@@ -1,0 +1,53 @@
+$date
+	Mon Jun 22 23:57:17 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module behavioural_modelling_tb $end
+$var wire 1 ! xnor_g $end
+$var wire 1 " nor_g $end
+$var wire 1 # nand_g $end
+$var reg 1 $ a $end
+$var reg 1 % b $end
+$scope module uut $end
+$var wire 1 $ a $end
+$var wire 1 % b $end
+$var reg 1 # nand_g $end
+$var reg 1 " nor_g $end
+$var reg 1 ! xnor_g $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+x%
+x$
+x#
+x"
+x!
+$end
+#10000
+1!
+1"
+1#
+0%
+0$
+#20000
+0!
+0"
+1%
+#30000
+0%
+1$
+#40000
+1!
+0#
+1%
+#50000

@@ -1,0 +1,49 @@
+#! /usr/bin/vvp
+:ivl_version "13.0 (stable)" "(v13_0-dirty)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib/ivl/system.vpi";
+:vpi_module "/usr/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/ivl/va_math.vpi";
+S_0x55b8b93c7550 .scope module, "behavioural_modelling" "behavioural_modelling" 2 5;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "nand_g";
+    .port_info 3 /OUTPUT 1 "nor_g";
+    .port_info 4 /OUTPUT 1 "xnor_g";
+o0x7f7a24a9c018 .functor BUFZ 1, c4<z>; HiZ drive
+v0x55b8b93c7790_0 .net "a", 0 0, o0x7f7a24a9c018;  0 drivers
+o0x7f7a24a9c048 .functor BUFZ 1, c4<z>; HiZ drive
+v0x55b8b93e91a0_0 .net "b", 0 0, o0x7f7a24a9c048;  0 drivers
+v0x55b8b93e9260_0 .var "nand_g", 0 0;
+v0x55b8b93e9300_0 .var "nor_g", 0 0;
+v0x55b8b93e93c0_0 .var "xnor_g", 0 0;
+E_0x55b8b93d9f50 .event anyedge, v0x55b8b93c7790_0, v0x55b8b93e91a0_0;
+    .scope S_0x55b8b93c7550;
+T_0 ;
+    %wait E_0x55b8b93d9f50;
+    %load/vec4 v0x55b8b93c7790_0;
+    %load/vec4 v0x55b8b93e91a0_0;
+    %and;
+    %inv;
+    %assign/vec4 v0x55b8b93e9260_0, 0;
+    %load/vec4 v0x55b8b93c7790_0;
+    %load/vec4 v0x55b8b93e91a0_0;
+    %or;
+    %inv;
+    %assign/vec4 v0x55b8b93e9300_0, 0;
+    %load/vec4 v0x55b8b93c7790_0;
+    %load/vec4 v0x55b8b93e91a0_0;
+    %xor;
+    %inv;
+    %assign/vec4 v0x55b8b93e93c0_0, 0;
+    %jmp T_0;
+    .thread T_0, $push;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "behavModel.v";
