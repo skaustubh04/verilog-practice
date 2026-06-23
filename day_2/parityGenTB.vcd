@@ -1,0 +1,55 @@
+$date
+	Tue Jun 23 23:58:21 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module parity_gen_tb $end
+$var wire 1 ! gen_parity $end
+$var reg 4 " data_in [3:0] $end
+$var reg 1 # parity_type $end
+$scope module uut $end
+$var wire 4 $ data_in [3:0] $end
+$var wire 1 # parity_type $end
+$var reg 1 ! gen_parity $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 $
+0#
+b0 "
+0!
+$end
+#10000
+b11 "
+b11 $
+#20000
+b110 "
+b110 $
+#30000
+1!
+b1000 "
+b1000 $
+#60000
+b0 "
+b0 $
+1#
+#70000
+b11 "
+b11 $
+#80000
+b110 "
+b110 $
+#90000
+0!
+b1000 "
+b1000 $
+#100000
