@@ -10,6 +10,7 @@ I will also be adding on top of it.
 
 #### Day 1 to Day 2 - Basics
 Topics covered: <br>
-    -> [Day 1](https://github.com/skaustubh04/verilog-practice/tree/main/day_1 "Link to repo") - Behavioural Modelling<br>
-    -> [Day 2](https://github.com/skaustubh04/verilog-practice/tree/main/day_2 "Link to repo") - Parity Generator<br>
+    -> [Day 1](https://github.com/skaustubh04/verilog-practice/tree/main/day_1 "Link to dir") - Behavioural Modelling <br>
+    -> [Day 2](https://github.com/skaustubh04/verilog-practice/tree/main/day_2 "Link to dir") - Parity Generator <br>
+    -> [Day 3](https://github.com/skaustubh04/verilog-practice/tree/main/day_3 "Link to dir") - ALU Multi-bit Adder/Subtractor <br>
     _... (the next day will also be in `Basics` section)._
