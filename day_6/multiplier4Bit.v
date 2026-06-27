@@ -20,23 +20,13 @@ module multiplier_4bit (
 	output [7:0] p
 );
 
-	wire [3:0] m0;
-	wire [4:0] m1;
-	wire [5:0] m2;
-	wire [6:0] m3;	// 7-bit final product after LSL
+	wire [3:0] m [3:0];
 
-	wire [7:0] s [2:0];
+	assign m[0] = {4{b[0]}} & a;
+	assign m[1] = {4{b[1]}} & a;
+	assign m[2] = {4{b[2]}} & a;
+	assign m[3] = {4{b[3]}} & a;
 
-	assign m0 = {4{b[0]}} & a;
-	assign m1 = {4{b[1]}} & a;
-	assign m2 = {4{b[2]}} & a;
-	assign m3 = {4{b[3]}} & a;
-
-	assign s[0] = m0 + (m1<<1);
-	assign s[1] = s[0] + (m2<<2);
-	assign s[2] = s[1] + (m3<<3);
-	assign p = s[2];
-
-	// assign p = m0 + (m1 << 1) + (m2 << 2) + (m3 << 3);
+	assign p = m[0] + (m[1] << 1) + (m[2] << 2) + (m[3] << 3);
 
 endmodule
