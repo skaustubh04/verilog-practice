@@ -17,7 +17,7 @@ module alu_add_sub #(parameter WIDTH=4)(a, b, cb_in, mode, sum, cb_out);
 		end
 		else if (mode == 1'b1) begin
 			// SUB
-			{cb_out, sum} = a - b - cb_in;
+			{cb_out, sum} = {1'b0, a} - {1'b0, b} - cb_in;
 		end
 		else begin
 			// explicilty mentioning unknown values
