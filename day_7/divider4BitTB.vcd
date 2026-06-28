@@ -1,0 +1,68 @@
+$date
+	Sun Jun 28 23:50:56 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module divider_4bit_tb $end
+$var wire 4 ! remainder [3:0] $end
+$var wire 4 " quotient [3:0] $end
+$var reg 4 # dividend [3:0] $end
+$var reg 4 $ divisor [3:0] $end
+$var integer 32 % i [31:0] $end
+$scope module uut $end
+$var wire 4 & dividend [3:0] $end
+$var wire 4 ' divisor [3:0] $end
+$var reg 4 ( quotient [3:0] $end
+$var reg 4 ) remainder [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b100 )
+b0 (
+b1001 '
+b100 &
+b0 %
+b1001 $
+b100 #
+b0 "
+b100 !
+$end
+#10000
+b11 !
+b11 )
+b11 #
+b11 &
+b0 $
+b0 '
+b1 %
+#20000
+b1 "
+b1 (
+b100 !
+b100 )
+b1100 #
+b1100 &
+b1000 $
+b1000 '
+b10 %
+#30000
+b0 !
+b0 )
+b0 "
+b0 (
+b0 #
+b0 &
+b11 $
+b11 '
+b11 %
+#40000
+b100 %

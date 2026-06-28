@@ -8,7 +8,7 @@ I will also be adding on top of it.
    - [ICARUS Verilog](https://github.com/steveicarus/iverilog "iverilog's Github repo") - code compilation <br>
    - [GTKWave](https://github.com/gtkwave/gtkwave "GTKWave's Github repo") - waveform simulation <br>
 
-#### Day 1 to Day 6 - Basics
+#### Day 1 to Day 7 - Basics
 Topics covered: <br>
     -> [Day 1](https://github.com/skaustubh04/verilog-practice/tree/main/day_1 "Link to dir") - Behavioural Modelling <br>
     -> [Day 2](https://github.com/skaustubh04/verilog-practice/tree/main/day_2 "Link to dir") - Parity Generator <br>
@@ -16,4 +16,5 @@ Topics covered: <br>
     -> [Day 4](https://github.com/skaustubh04/verilog-practice/tree/main/day_4 "Link to dir") - CLA <br>
     -> [Day 5](https://github.com/skaustubh04/verilog-practice/tree/main/day_5 "Link to dir") - CSA (4-bit & 16-bit) (16-bit is backlog) <br>
     -> [Day 6](https://github.com/skaustubh04/verilog-practice/tree/main/day_6 "Link to dir") - 4-bit Multiplier <br>
+    -> [Day 7](https://github.com/skaustubh04/verilog-practice/tree/main/day_7 "Link to dir") - 4-bit Divider <br>
     _... (the next day will also be in `Basics` section)._

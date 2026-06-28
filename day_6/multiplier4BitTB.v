@@ -15,7 +15,7 @@ module multiplier_4bit_tb;
 		$dumpvars (0, multiplier_4bit_tb);
 
 		$display ("\n");
-		$monitor ("a=%b, b=%b, p=%b (%b)", a, b, p, p);
+		$monitor ("a=%b, b=%b, p=%b (%d)", a, b, p, p);
 
 		for (i=0; i<8; i+=1) begin
 			a = $urandom_range (0, 15);
