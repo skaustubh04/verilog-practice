@@ -1,0 +1,69 @@
+$date
+	Mon Jun 29 23:50:04 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module multi_bit_comparator_tb $end
+$var wire 1 ! a_less_b $end
+$var wire 1 " a_great_b $end
+$var wire 1 # a_equal_b $end
+$var parameter 32 $ WIDTH $end
+$var reg 4 % a [3:0] $end
+$var reg 4 & b [3:0] $end
+$var integer 32 ' i [31:0] $end
+$scope module uut $end
+$var wire 4 ( a [3:0] $end
+$var wire 4 ) b [3:0] $end
+$var wire 1 ! a_less_b $end
+$var wire 1 " a_great_b $end
+$var wire 1 # a_equal_b $end
+$var parameter 32 * WIDTH $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100 *
+b100 $
+$end
+#0
+$dumpvars
+b100 )
+b1001 (
+b0 '
+b100 &
+b1001 %
+0#
+1"
+0!
+$end
+#10000
+b11 &
+b11 )
+0"
+1!
+b0 %
+b0 (
+b1 '
+#20000
+b1100 &
+b1100 )
+0"
+1!
+b1000 %
+b1000 (
+b10 '
+#30000
+1"
+0!
+b0 &
+b0 )
+b11 %
+b11 (
+b11 '
+#40000
+b100 '
