@@ -1,0 +1,195 @@
+$date
+	Tue Jun 30 23:59:06 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module mux_8x1_tb $end
+$var wire 1 ! y $end
+$var reg 8 " i [7:0] $end
+$var reg 3 # sel [2:0] $end
+$var integer 32 $ k [31:0] $end
+$scope module uut $end
+$var wire 8 % i [7:0] $end
+$var wire 3 & sel [2:0] $end
+$var wire 1 ! y $end
+$var wire 6 ' w [5:0] $end
+$scope module m21_1_1 $end
+$var wire 2 ( I [1:0] $end
+$var wire 1 ) Sel $end
+$var wire 1 * Y $end
+$upscope $end
+$scope module m21_1_2 $end
+$var wire 2 + I [1:0] $end
+$var wire 1 , Sel $end
+$var wire 1 - Y $end
+$upscope $end
+$scope module m21_1_3 $end
+$var wire 2 . I [1:0] $end
+$var wire 1 / Sel $end
+$var wire 1 0 Y $end
+$upscope $end
+$scope module m21_1_4 $end
+$var wire 2 1 I [1:0] $end
+$var wire 1 2 Sel $end
+$var wire 1 3 Y $end
+$upscope $end
+$scope module m21_2_1 $end
+$var wire 2 4 I [1:0] $end
+$var wire 1 5 Sel $end
+$var wire 1 6 Y $end
+$upscope $end
+$scope module m21_2_2 $end
+$var wire 2 7 I [1:0] $end
+$var wire 1 8 Sel $end
+$var wire 1 9 Y $end
+$upscope $end
+$scope module m21_3_1 $end
+$var wire 2 : I [1:0] $end
+$var wire 1 ; Sel $end
+$var wire 1 ! Y $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0;
+b10 :
+19
+18
+b10 7
+06
+15
+b1 4
+13
+02
+b1 1
+00
+0/
+b0 .
+0-
+0,
+b10 +
+1*
+0)
+b1 (
+b101001 '
+b10 &
+b1001001 %
+b0 $
+b10 #
+b1001001 "
+0!
+$end
+#10000
+1!
+b1 :
+b0 7
+b10001 '
+03
+16
+09
+1)
+1,
+1/
+12
+05
+08
+b10 (
+b0 +
+b0 1
+b1 #
+b1 &
+b10 "
+b10 %
+b1 $
+#20000
+19
+b10 :
+b10 7
+b101001 '
+13
+06
+1!
+0)
+0,
+0/
+02
+15
+18
+1;
+b11 (
+b1 1
+b110 #
+b110 &
+b1000011 "
+b1000011 %
+b10 $
+#30000
+b11 :
+b1 7
+b110101 '
+10
+03
+16
+19
+1!
+05
+08
+0;
+b1 (
+b10 +
+b1 .
+b0 1
+b0 #
+b0 &
+b11001 "
+b11001 %
+b11 $
+#40000
+0!
+b0 :
+09
+06
+b10 7
+b0 4
+b1000 '
+0*
+00
+13
+1;
+b0 (
+b0 +
+b0 .
+b1 1
+b100 #
+b100 &
+b1000000 "
+b1000000 %
+b100 $
+#50000
+1!
+b11 :
+19
+16
+b11 7
+b11 4
+b111111 '
+1*
+1-
+10
+b1 (
+b11 +
+b1 .
+b1011101 "
+b1011101 %
+b101 $
+#60000
+b110 $
