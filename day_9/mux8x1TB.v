@@ -15,9 +15,9 @@ module mux_8x1_tb;
 		$dumpvars (0, mux_8x1_tb);
 
 		$display ("\n");
-		$display (" i[0] | i[1] | i[2] | i[3] | i[4] | i[5] | i[6] | i[7] | sel[0] | sel[1] | sel[2] |   y  ");
+		$display (" i[7] | i[6] | i[5] | i[4] | i[3] | i[2] | i[1] | i[0] | sel[2] | sel[1] | sel[0] |   y  ");
 		$display ("------|------|------|------|------|------|------|------|--------|--------|--------|-----");
-		$monitor ("   %b  |   %b  |   %b  |   %b  |   %b  |   %b  |   %b  |   %b  |    %b   |    %b   |    %b   |   %b ", i[0], i[1], i[2], i[3], i[4], i[5], i[6], i[7], sel[0], sel[1], sel[2], y);
+		$monitor ("   %b  |   %b  |   %b  |   %b  |   %b  |   %b  |   %b  |   %b  |    %b   |    %b   |    %b   |   %b ", i[7], i[6], i[5], i[4], i[3], i[2], i[1], i[0], sel[2], sel[1], sel[0], y);
 
 		for (k=0; k<6; k++) begin
 			i = $urandom_range (0, 2**(7)-1);
