@@ -1,0 +1,21 @@
+$date
+	Wed Jul  1 23:41:05 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module test_tb $end
+$var reg 2 ! i [1:0] $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1 !
+$end
+#10000

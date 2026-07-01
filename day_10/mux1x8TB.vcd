@@ -1,0 +1,161 @@
+$date
+	Thu Jul  2 00:43:40 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module mux_1x8_tb $end
+$var wire 8 ! y [7:0] $end
+$var reg 1 " i $end
+$var reg 3 # sel [2:0] $end
+$var integer 32 $ k [31:0] $end
+$scope module uut $end
+$var wire 1 " i $end
+$var wire 3 % sel [2:0] $end
+$var wire 8 & y [7:0] $end
+$var wire 6 ' w [5:0] $end
+$scope module dm1x2_1_1 $end
+$var wire 1 " I $end
+$var wire 1 ( Sel $end
+$var wire 2 ) Y [1:0] $end
+$upscope $end
+$scope module dm1x2_2_1 $end
+$var wire 1 * I $end
+$var wire 1 + Sel $end
+$var wire 2 , Y [1:0] $end
+$upscope $end
+$scope module dm1x2_2_2 $end
+$var wire 1 - I $end
+$var wire 1 . Sel $end
+$var wire 2 / Y [1:0] $end
+$upscope $end
+$scope module dm1x2_3_1 $end
+$var wire 1 0 I $end
+$var wire 1 1 Sel $end
+$var wire 2 2 Y [1:0] $end
+$upscope $end
+$scope module dm1x2_3_2 $end
+$var wire 1 3 I $end
+$var wire 1 4 Sel $end
+$var wire 2 5 Y [1:0] $end
+$upscope $end
+$scope module dm1x2_3_3 $end
+$var wire 1 6 I $end
+$var wire 1 7 Sel $end
+$var wire 2 8 Y [1:0] $end
+$upscope $end
+$scope module dm1x2_3_4 $end
+$var wire 1 9 I $end
+$var wire 1 : Sel $end
+$var wire 2 ; Y [1:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx ;
+0:
+x9
+bx 8
+07
+x6
+bx1 5
+04
+13
+bx 2
+01
+x0
+bx /
+1.
+x-
+b1x ,
+1+
+1*
+bx1 )
+0(
+bx1xx1 '
+bx1xx &
+b10 %
+b0 $
+b10 #
+1"
+bx1xx !
+$end
+#10000
+b0x 2
+00
+x3
+0*
+bx0x !
+bx0x &
+bx0x0 '
+bx0 ,
+bx 5
+bx0 )
+0+
+0.
+11
+14
+17
+1:
+b1 #
+b1 %
+0"
+b1 $
+#20000
+bx1 ;
+19
+bx 5
+b1x /
+x0
+x3
+1-
+x*
+bx1xxxxxx !
+bx1xxxxxx &
+b1xxx1x '
+bx ,
+bx 2
+b1x )
+1(
+1+
+1.
+01
+04
+07
+0:
+b110 #
+b110 %
+1"
+b10 $
+#30000
+bx0 2
+00
+bx0 !
+bx0 &
+bx 8
+bx ;
+bx0 ,
+x6
+x9
+x-
+0*
+bx0x0 '
+bx /
+bx0 )
+0(
+0+
+0.
+b0 #
+b0 %
+0"
+b11 $
+#40000
+b100 $
