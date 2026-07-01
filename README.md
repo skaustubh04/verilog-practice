@@ -19,5 +19,5 @@ Topics covered: <br>
     -> [Day 7](https://github.com/skaustubh04/verilog-practice/tree/main/day_7 "Link to dir") - 4-bit Divider <br>
     -> [Day 8](https://github.com/skaustubh04/verilog-practice/tree/main/day_8 "Link to dir") - Multi-bit Comparator <br>
     -> [Day 9](https://github.com/skaustubh04/verilog-practice/tree/main/day_9 "Link to dir") - 8x1 Mux <br>
-    -> [Day 9](https://github.com/skaustubh04/verilog-practice/tree/main/day_10 "Link to dir") - 1x8 Demux <br>
+    -> [Day 10](https://github.com/skaustubh04/verilog-practice/tree/main/day_10 "Link to dir") - 1x8 Demux <br>
     _... (the next day will also be in `Basics` section)._
