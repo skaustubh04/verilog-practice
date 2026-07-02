@@ -1,3 +1,5 @@
+// DECIMAL TO BCD PRIORITY ENCODER
+
 `timescale 1ns / 1ps
 
 module priority_encoder (

@@ -8,7 +8,7 @@ I will also be adding on top of it.
    - [ICARUS Verilog](https://github.com/steveicarus/iverilog "iverilog's Github repo") - code compilation <br>
    - [GTKWave](https://github.com/gtkwave/gtkwave "GTKWave's Github repo") - waveform simulation <br>
 
-#### Day 1 to Day 10 - Basics
+#### Day 1 to Day 11 - Basics
 Topics covered: <br>
     -> [Day 1](https://github.com/skaustubh04/verilog-practice/tree/main/day_1 "Link to dir") - Behavioural Modelling <br>
     -> [Day 2](https://github.com/skaustubh04/verilog-practice/tree/main/day_2 "Link to dir") - Parity Generator <br>
@@ -20,4 +20,5 @@ Topics covered: <br>
     -> [Day 8](https://github.com/skaustubh04/verilog-practice/tree/main/day_8 "Link to dir") - Multi-bit Comparator <br>
     -> [Day 9](https://github.com/skaustubh04/verilog-practice/tree/main/day_9 "Link to dir") - 8x1 Mux <br>
     -> [Day 10](https://github.com/skaustubh04/verilog-practice/tree/main/day_10 "Link to dir") - 1x8 Demux <br>
+    -> [Day 11](https://github.com/skaustubh04/verilog-practice/tree/main/day_11 "Link to dir") - Decimal - BCD Priority Encoder, BCD - 7-Segment Decoder <br>
     _... (the next day will also be in `Basics` section)._

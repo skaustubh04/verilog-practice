@@ -1,0 +1,86 @@
+$date
+	Fri Jul  3 01:18:01 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module decoder_tb $end
+$var wire 8 ! y [7:0] $end
+$var reg 4 " bcd_in [3:0] $end
+$var integer 32 # i [31:0] $end
+$scope module uut $end
+$var wire 4 $ bcd_in [3:0] $end
+$var reg 8 % y [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b111111 %
+b0 $
+b0 #
+b0 "
+b111111 !
+$end
+#10000
+b110 !
+b110 %
+b1 "
+b1 $
+b1 #
+#20000
+b1011011 !
+b1011011 %
+b10 "
+b10 $
+b10 #
+#30000
+b1001111 !
+b1001111 %
+b11 "
+b11 $
+b11 #
+#40000
+b1100110 !
+b1100110 %
+b100 "
+b100 $
+b100 #
+#50000
+b1101101 !
+b1101101 %
+b101 "
+b101 $
+b101 #
+#60000
+b1111101 !
+b1111101 %
+b110 "
+b110 $
+b110 #
+#70000
+b111 !
+b111 %
+b111 "
+b111 $
+b111 #
+#80000
+b1111111 !
+b1111111 %
+b1000 "
+b1000 $
+b1000 #
+#90000
+b1101111 !
+b1101111 %
+b1001 "
+b1001 $
+b1001 #
+#100000
+b1010 #
