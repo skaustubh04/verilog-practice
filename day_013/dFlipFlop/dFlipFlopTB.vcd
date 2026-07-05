@@ -1,0 +1,59 @@
+$date
+	Sun Jul  5 19:14:06 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module d_flip_flop_tb $end
+$var wire 1 ! q $end
+$var reg 1 " clk $end
+$var reg 1 # d $end
+$var reg 1 $ rst $end
+$scope module uut $end
+$var wire 1 " clk $end
+$var wire 1 # d $end
+$var wire 1 $ rst $end
+$var reg 1 ! q $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+1$
+x#
+0"
+0!
+$end
+#500
+1"
+#700
+0$
+#1000
+0#
+0"
+#1500
+1"
+#2000
+0"
+1#
+#2500
+1!
+1"
+#3000
+0!
+0"
+1$
+#3500
+1"
+#4000
+0"
+#4500
+1"
+#5000
+0"

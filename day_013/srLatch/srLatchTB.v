@@ -14,8 +14,6 @@ module sr_latch_tb;
 	initial begin
 		$timeformat (-9, 0, "", 5);
 
-		#10;
-
 		s = 1'b0;
 		r = 1'b0;
 
@@ -25,15 +23,15 @@ module sr_latch_tb;
 		$display ("\nSR LATCH\n");
 		$display (" Time | s | r | q | q_bar");
 		$display ("------|---|---|---|------");
-		$monitor ("  %0t  | %b | %b | %b |  %b ", $time, s, r, q, q_bar);
+		$monitor ("   %0t  | %b | %b | %b |  %b ", $time, s, r, q, q_bar);
 
 		// looped twice to show output of 
 		// first case when {q,q_bar} =/= 2'bxx
 		for (i=0; i<2; i++) begin
-			s=1'b0; r=1'b0; #10;
-			s=1'b0; r=1'b1; #10;
-			s=1'b1; r=1'b0; #10;
-			s=1'b1; r=1'b1; #10;
+			s=1'b0; r=1'b0; #1;
+			s=1'b0; r=1'b1; #1;
+			s=1'b1; r=1'b0; #1;
+			s=1'b1; r=1'b1; #1;
 		end
 
 		#1;
