@@ -1,0 +1,311 @@
+$date
+	Sun Jul  5 19:57:31 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module csa_16bit_tb $end
+$var wire 16 ! sum [15:0] $end
+$var wire 1 " c_out $end
+$var reg 16 # a [15:0] $end
+$var reg 16 $ b [15:0] $end
+$var reg 1 % c_in $end
+$var integer 32 & i [31:0] $end
+$scope module uut $end
+$var wire 16 ' a [15:0] $end
+$var wire 16 ( b [15:0] $end
+$var wire 1 % c_in $end
+$var wire 16 ) p [15:0] $end
+$var wire 4 * w [3:0] $end
+$var wire 16 + sum [15:0] $end
+$var wire 4 , fa_w [3:0] $end
+$var wire 1 " c_out $end
+$scope module fa1 $end
+$var wire 4 - A [3:0] $end
+$var wire 4 . B [3:0] $end
+$var wire 1 % Cin $end
+$var wire 3 / W [2:0] $end
+$var wire 4 0 Sum [3:0] $end
+$var wire 1 1 Cout $end
+$upscope $end
+$scope module fa2 $end
+$var wire 4 2 A [3:0] $end
+$var wire 4 3 B [3:0] $end
+$var wire 1 4 Cin $end
+$var wire 3 5 W [2:0] $end
+$var wire 4 6 Sum [3:0] $end
+$var wire 1 7 Cout $end
+$upscope $end
+$scope module fa3 $end
+$var wire 4 8 A [3:0] $end
+$var wire 4 9 B [3:0] $end
+$var wire 1 : Cin $end
+$var wire 3 ; W [2:0] $end
+$var wire 4 < Sum [3:0] $end
+$var wire 1 = Cout $end
+$upscope $end
+$scope module fa4 $end
+$var wire 4 > A [3:0] $end
+$var wire 4 ? B [3:0] $end
+$var wire 1 @ Cin $end
+$var wire 3 A W [2:0] $end
+$var wire 4 B Sum [3:0] $end
+$var wire 1 C Cout $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0C
+b1101 B
+b0 A
+0@
+b100 ?
+b1001 >
+0=
+b10 <
+b0 ;
+0:
+b0 9
+b10 8
+07
+b1001 6
+b0 5
+04
+b1000 3
+b1 2
+01
+b1110 0
+b1 /
+b1001 .
+b101 -
+b0 ,
+b1101001010011110 +
+bz000 *
+b1101001010011100 )
+b100000010001001 (
+b1001001000010101 '
+b0 &
+0%
+b100000010001001 $
+b1001001000010101 #
+0"
+b1101001010011110 !
+$end
+#10000
+b1 ;
+1:
+bz010 *
+b0 /
+b111 6
+b10 ,
+b110 <
+b11 B
+b11011001110101 !
+b11011001110101 +
+17
+b101 0
+b0 .
+b1111 3
+b1 9
+b11 ?
+b11010101110100 )
+b100 -
+b1000 2
+b100 8
+b0 >
+1%
+b11000111110000 $
+b11000111110000 (
+b10010000100 #
+b10010000100 '
+b1 &
+#20000
+14
+bz011 *
+1"
+b100110110011001 !
+b100110110011001 +
+b1001 0
+b1101 <
+b100 B
+b1011 ,
+b111 /
+b1001 6
+b111 5
+b110 ;
+11
+1C
+b1111 .
+b1101 3
+b110 9
+b1100 ?
+b100000001100110 )
+b1001 -
+b1011 2
+b110 8
+b1000 >
+b1100011011011111 $
+b1100011011011111 (
+b1000011010111001 #
+b1000011010111001 '
+b10 &
+#30000
+07
+0:
+b0 A
+b0 5
+0@
+04
+bz000 *
+0"
+b11101111111010 !
+b11101111111010 +
+b0 ;
+b1011 <
+b1010 0
+b1111 6
+b11 B
+b0 ,
+01
+0=
+0C
+b111 .
+b11 3
+b1001 9
+b0 ?
+b11101111110101 )
+b10 -
+b1100 2
+b10 8
+b11 >
+b100100110111 $
+b100100110111 (
+b11001011000010 #
+b11001011000010 '
+b11 &
+#40000
+1:
+bz010 *
+1"
+b11111001011 !
+b11111001011 +
+b111 <
+b1010 ,
+b1011 0
+b1100 6
+b111 5
+b0 B
+17
+1C
+b1101 3
+b110 9
+b1000 ?
+b11000100100 )
+b11 -
+b1111 2
+b0 8
+b1000 >
+b1000011011010111 $
+b1000011011010111 (
+b1000000011110011 #
+b1000000011110011 '
+b100 &
+#50000
+0:
+1@
+14
+bz101 *
+07
+b101100110110001 !
+b101100110110001 +
+b1 0
+b1101 ,
+b11 A
+b0 5
+b1011 6
+b1001 <
+b110 ;
+b101 B
+11
+1=
+b1101 .
+b1000 3
+b1110 9
+b1001 ?
+b10010110101110 )
+b10 2
+b1011 8
+b1011 >
+b1001111010001101 $
+b1001111010001101 (
+b1011101100100011 #
+b1011101100100011 '
+b101 &
+#60000
+17
+0@
+b1011110100000010 !
+b1011110100000010 +
+b1011 ,
+b1011 B
+1:
+b101 /
+b10 0
+b111 5
+b0 6
+b1101 <
+b100 A
+0=
+bz011 *
+b10 3
+b110 9
+b1100 ?
+b11000011111001 )
+b100 -
+b1101 2
+b110 8
+b1111 >
+b1100011000101101 $
+b1100011000101101 (
+b1111011011010100 #
+b1111011011010100 '
+b110 &
+#70000
+b111 A
+b110 B
+1@
+b11 6
+b111 ;
+b0 <
+b1111 ,
+b110000000110100 !
+b110000000110100 +
+bz111 *
+1=
+b100 0
+b111 /
+b111 .
+b11 3
+b11 9
+b110 ?
+b1001111111001010 )
+b1101 -
+b1111 2
+b1100 8
+0%
+b110001100110111 $
+b110001100110111 (
+b1111110011111101 #
+b1111110011111101 '
+b111 &
+#80000
+b1000 &
+#81000

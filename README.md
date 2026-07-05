@@ -14,7 +14,7 @@ Topics covered: <br>
     -> [Day 2](https://github.com/skaustubh04/verilog-practice/tree/main/day_002 "Link to dir") - Parity Generator <br>
     -> [Day 3](https://github.com/skaustubh04/verilog-practice/tree/main/day_003 "Link to dir") - ALU Multi-bit Adder/Subtractor <br>
     -> [Day 4](https://github.com/skaustubh04/verilog-practice/tree/main/day_004 "Link to dir") - CLA <br>
-    -> [Day 5](https://github.com/skaustubh04/verilog-practice/tree/main/day_005 "Link to dir") - CSA (4-bit & 16-bit) (16-bit is backlog) <br>
+    -> [Day 5](https://github.com/skaustubh04/verilog-practice/tree/main/day_005 "Link to dir") - CSA (4-bit & 16-bit) <br>
     -> [Day 6](https://github.com/skaustubh04/verilog-practice/tree/main/day_006 "Link to dir") - 4-bit Multiplier <br>
     -> [Day 7](https://github.com/skaustubh04/verilog-practice/tree/main/day_007 "Link to dir") - 4-bit Divider <br>
     -> [Day 8](https://github.com/skaustubh04/verilog-practice/tree/main/day_008 "Link to dir") - Multi-bit Comparator <br>
