@@ -23,4 +23,7 @@ Topics covered: <br>
     -> [Day 11](https://github.com/skaustubh04/verilog-practice/tree/main/day_011 "Link to dir") - Decimal to BCD Priority Encoder, BCD to 7-Segment Decoder <br>
     -> [Day 12](https://github.com/skaustubh04/verilog-practice/tree/main/day_012 "Link to dir") - Binary to Gray Code, Gray Code to Binary conversion <br>
     -> [Day 13](https://github.com/skaustubh04/verilog-practice/tree/main/day_013 "Link to dir") - SR-Latch, D-Latch, D-F/F <br>
-    _... (the next day will also be in `Basics` section)._
+
+#### Day 14 - Synchronous & Asynchronous Sequential Circuits
+Topics covered: <br>
+    -> [Day 14](https://github.com/skaustubh04/verilog-practice/tree/main/day_014 "Link to dir") - Mealy Machine: Consecutive 3 Ones Detector [[FSM](https://en.wikipedia.org/wiki/Finite-state_machine "FSM on Wikipedia")] [[Mealy Machine](https://en.wikipedia.org/wiki/Moore_machine "Mealy Machine on Wikipedia")] <br>

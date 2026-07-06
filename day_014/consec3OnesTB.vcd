@@ -1,0 +1,124 @@
+$date
+	Mon Jul  6 23:17:17 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module consec_3_ones_tb $end
+$var wire 1 ! y $end
+$var reg 1 " bitstream $end
+$var reg 1 # clk $end
+$var reg 10 $ pattern [9:0] $end
+$var reg 1 % rst $end
+$var integer 32 & i [31:0] $end
+$scope module uut $end
+$var wire 1 " bitstream $end
+$var wire 1 # clk $end
+$var wire 1 % rst $end
+$var parameter 2 ' S0 $end
+$var parameter 2 ( S1 $end
+$var parameter 2 ) S2 $end
+$var reg 2 * curr_state [1:0] $end
+$var reg 2 + next_state [1:0] $end
+$var reg 1 ! y $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b10 )
+b1 (
+b0 '
+$end
+#0
+$dumpvars
+b0 +
+b0 *
+bx &
+1%
+b110011110 $
+0#
+0"
+0!
+$end
+#1000
+1#
+#2000
+b1001 &
+0%
+0#
+#3000
+b1000 &
+1#
+#4000
+0#
+#5000
+b1 +
+1"
+b111 &
+1#
+#6000
+0#
+#7000
+b10 +
+b1 *
+b110 &
+1#
+#8000
+0#
+#9000
+b0 +
+b10 *
+0"
+b101 &
+1#
+#10000
+0#
+#11000
+b0 *
+b100 &
+1#
+#12000
+0#
+#13000
+b1 +
+1"
+b11 &
+1#
+#14000
+0#
+#15000
+b10 +
+b1 *
+b10 &
+1#
+#16000
+0#
+#17000
+1!
+b10 *
+b1 &
+1#
+#18000
+0#
+#19000
+b0 &
+1#
+#20000
+0#
+#21000
+b0 +
+0!
+0"
+b11111111111111111111111111111111 &
+1#
+#22000
+0#
+#23000
+b0 *
+1#
+#24000
+0#
