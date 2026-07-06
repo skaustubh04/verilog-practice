@@ -26,5 +26,5 @@ Topics covered: <br>
 
 #### Day 14 - Synchronous & Asynchronous Sequential Circuits
 Topics covered: <br>
-    -> [Day 14](https://github.com/skaustubh04/verilog-practice/tree/main/day_014 "Link to dir") - Moore & Mealy Machine: Consecutive 3 Ones Detector [[FSM](https://en.wikipedia.org/wiki/Finite-state_machine "FSM on Wikipedia")] [[Mealy](https://en.wikipedia.org/wiki/Moore_machine "Mealy Machine on Wikipedia")] [[Moore](https://en.wikipedia.org/wiki/Moore_machine "Moore Machine on Wikipedia")] <br>
+    -> [Day 14](https://github.com/skaustubh04/verilog-practice/tree/main/day_014 "Link to dir") - Moore & Mealy Machine: Consecutive 3 Ones Detector [[FSM](https://en.wikipedia.org/wiki/Finite-state_machine "FSM on Wikipedia")] [[Mealy Machine](https://en.wikipedia.org/wiki/Moore_machine "Mealy Machine on Wikipedia")] [[Moore Machine](https://en.wikipedia.org/wiki/Moore_machine "Moore Machine on Wikipedia")] <br>
     _Next day will also be in `Synchronous & Asynchronous Sequential Circuits` Section..._
