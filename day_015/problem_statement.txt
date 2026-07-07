@@ -1,0 +1,34 @@
+/* LOGIC IS AS EXPLAINED BELOW
+*
+*  The machine has 2 inputs -> traffic_ew, traffic_lt
+*  `traffic_ew` indicates any traffic on East-West road (EW)
+*  `traffic_lt` indicates any traffic on Left Turn lane (LT)
+*
+*  The machine has 9 output lines. These drive 3 sets of 
+*  3 traffic lights each for the North-South (NS) road,
+*  East-West road, and Left Turn lane (along NS road).
+*  Each set of lights contain red, yellow, and green light.
+*
+*  Normally the light will be green for the NS road.
+*  If a car is detected on the EW road or LT lane, their
+*  green lights should be turned on, with priority of
+*  LT lane > EW road.
+*  These lights are kept to green until -
+*  1. No more cars on that specific road/lane
+*  2. Green light times out
+*  The lights then turn on for NS road.
+*  
+*  Order of switching lights -
+*  GREEN -> YELLOW -> RED
+*  RED -> GREEN
+*
+*  The lights must stay ON for this long -
+*  GREEN  ->
+*  YELLOW ->
+*  RED    -> 
+*  
+*
+*  
+*  
+*/
+
