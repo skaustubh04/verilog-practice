@@ -1,0 +1,316 @@
+$date
+	Thu Jul  9 23:58:17 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module light_flasher_tb $end
+$var wire 1 ! light_out $end
+$var reg 1 " clk $end
+$var reg 1 # flash_req $end
+$var reg 1 $ rst $end
+$scope module uut $end
+$var wire 1 " clk $end
+$var wire 1 # flash_req $end
+$var wire 1 $ rst $end
+$var wire 1 % timer_done $end
+$var parameter 3 & S_HIGH_1 $end
+$var parameter 3 ' S_HIGH_2 $end
+$var parameter 3 ( S_HIGH_3 $end
+$var parameter 3 ) S_LOW_1 $end
+$var parameter 3 * S_LOW_2 $end
+$var parameter 3 + S_OFF $end
+$var reg 3 , curr_state_r [2:0] $end
+$var reg 1 ! light_out $end
+$var reg 3 - next_state_ns [2:0] $end
+$var reg 1 . timer_en $end
+$var reg 1 / timer_mode $end
+$scope module t1 $end
+$var wire 1 " clk $end
+$var wire 1 $ rst $end
+$var wire 1 . timer_en $end
+$var wire 1 / timer_mode $end
+$var wire 1 % timer_done $end
+$var parameter 3 0 T_LIGHT_OFF $end
+$var parameter 3 1 T_LIGHT_ON $end
+$var reg 3 2 curr_count_r [2:0] $end
+$var reg 3 3 next_count_ns [2:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b101 1
+b11 0
+b0 +
+b100 *
+b10 )
+b101 (
+b11 '
+b1 &
+$end
+#0
+$dumpvars
+b0 3
+b0 2
+1/
+1.
+b0x -
+b0 ,
+1%
+1$
+x#
+0"
+0!
+$end
+#1000
+1"
+#2000
+1.
+1/
+b1 -
+b101 3
+1#
+0$
+0"
+#3000
+b100 3
+1!
+0.
+0/
+0%
+b101 2
+b1 ,
+1"
+#4000
+0"
+#5000
+b11 3
+b100 2
+1"
+#6000
+0"
+#7000
+b10 3
+b11 2
+1"
+#8000
+0"
+#9000
+b1 3
+b10 2
+1"
+#10000
+0"
+#11000
+b0 3
+b1 2
+1"
+#12000
+0"
+#13000
+b11 3
+1.
+b10 -
+1!
+1%
+b0 2
+1"
+#14000
+0"
+#15000
+b10 3
+0.
+0!
+0%
+b11 2
+b10 ,
+1"
+#16000
+0"
+#17000
+b1 3
+b10 2
+1"
+#18000
+0"
+#19000
+b0 3
+b1 2
+1"
+#20000
+0"
+#21000
+b101 3
+1.
+1/
+b11 -
+1%
+b0 2
+1"
+#22000
+0"
+#23000
+b100 3
+1!
+0.
+0/
+0%
+b101 2
+b11 ,
+1"
+#24000
+0"
+#25000
+b11 3
+b100 2
+1"
+#26000
+0"
+#27000
+b10 3
+b11 2
+1"
+#28000
+0"
+#29000
+b1 3
+b10 2
+1"
+#30000
+0"
+#31000
+b0 3
+b1 2
+1"
+#32000
+0"
+#33000
+b11 3
+1.
+b100 -
+1!
+1%
+b0 2
+1"
+#34000
+0"
+#35000
+b10 3
+0.
+0!
+0%
+b11 2
+b100 ,
+1"
+#36000
+0"
+#37000
+b1 3
+b10 2
+1"
+#38000
+0"
+#39000
+b0 3
+b1 2
+1"
+#40000
+0"
+#41000
+b101 3
+1.
+1/
+b101 -
+1%
+b0 2
+1"
+#42000
+0"
+#43000
+b100 3
+1!
+0.
+0/
+0%
+b101 2
+b101 ,
+1"
+#44000
+0"
+#45000
+b11 3
+b100 2
+1"
+#46000
+0"
+#47000
+b10 3
+b11 2
+1"
+#48000
+0"
+#49000
+b1 3
+b10 2
+1"
+#50000
+0"
+#51000
+b0 3
+b1 2
+1"
+#52000
+0"
+#53000
+b11 3
+1.
+b0 -
+1!
+1%
+b0 2
+1"
+#54000
+0"
+#55000
+b101 3
+1/
+b1 -
+1.
+0!
+0%
+b11 2
+b0 ,
+1"
+#56000
+0"
+#57000
+b100 3
+1!
+0.
+0/
+b1 ,
+b101 2
+1"
+#58000
+0"
+#59000
+b11 3
+b100 2
+1"
+#60000
+0"
+#61000
+b10 3
+b11 2
+1"
+#62000
+0"
+#63000
+b1 3
+b10 2
+1"

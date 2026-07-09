@@ -12,44 +12,44 @@
 // direction -> outputs the requested direction
 
 module road_fsm (
-	input        clk,
-	input  	     rst,
-	input  	     traffic_ew,
-	input        traffic_lt,
-	input        ok,
-	output [1:0] direction
+	input wire       clk,
+	input wire       rst,
+	input wire       traffic_ew,
+	input wire       traffic_lt,
+	input wire       ok,
+	output reg [1:0] direction
 );
 
-	wire [`MWIDTH-1:0] curr_state, next_state;
-	reg  [`MWIDTH-1:0] next_state_noreg;  	   // next state without reset
+	reg [`MWIDTH-1:0] curr_state, next_state;
+	// wire [`MWIDTH-1:0] next_state_noreg     // NOT BEING USED
 	reg  tload;  				   // timer load
-	reg  [1:0] direction;			   // direction output
 	wire tdone;				   // timer complete
 
-	// instantiate state register
-	DFF #(`MWIDTH) state_reg (clk, next_state, curr_state);
+	// store value in `curr_state`
+	always @(posedge clk or posedge rst) begin
+		if (rst) curr_state <= `M_NS;
+		else 	 curr_state <= next_state;
+	end
 
 	// instantiate timer
 	Timer #(`TWIDTH) timer (clk, rst, tload, `T_EXP, tdone);
 
 	always @(*) begin
 		case (curr_state)
-			`M_NS : {direction, tload, next_state_noreg} = 
+			`M_NS : {direction, tload, next_state} = 
 				  {`M_NS, 1'b1, ok ? (traffic_lt ? `M_LT
 							         : (traffic_ew ? `M_EW : `M_NS))
 						   : `M_NS};
 
-			`M_EW : {direction, tload, next_state_noreg} = 
+			`M_EW : {direction, tload, next_state} = 
 				  {`M_EW, 1'b0, (ok & (!traffic_ew | tdone)) ? `M_NS : `M_EW};
 
-			`M_LT : {direction, tload, next_state_noreg} = 
+			`M_LT : {direction, tload, next_state} = 
 				  {`M_LT, 1'b0, (ok & (!traffic_lt | tdone)) ? `M_NS : `M_LT};
 
-			default : {direction, tload, next_state_noreg} = 
+			default : {direction, tload, next_state} = 
 				    {`M_NS, 1'b0, `M_NS};
 		endcase
 	end
-
-	assign next_state = rst ? `M_NS : next_state_noreg;
 
 endmodule
