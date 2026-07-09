@@ -27,6 +27,6 @@ Topics covered: <br>
 #### Day 14 to Day 16 - Synchronous & Asynchronous Sequential Circuits
 Topics covered: <br>
     -> [Day 14](https://github.com/skaustubh04/verilog-practice/tree/main/day_014 "Link to dir") - Moore & Mealy Machine: Consecutive 3 Ones Detector [[FSM](https://en.wikipedia.org/wiki/Finite-state_machine "FSM on Wikipedia")] [[Mealy](https://en.wikipedia.org/wiki/Moore_machine "Mealy Machine on Wikipedia")] [[Moore](https://en.wikipedia.org/wiki/Moore_machine "Moore Machine on Wikipedia")] <br>
-    -> [Day 15](https://github.com/skaustubh04/verilog-practice/tree/main/day_015 "Link to dir") - Factored FSM: Traffic Light System [INCOMPLETE] <br>
+    -> [Day 15](https://github.com/skaustubh04/verilog-practice/tree/main/day_015 "Link to dir") - Factored FSM: Light Flasher [COMPLETE], Traffic Light System [INCOMPLETE] <br>
     -> [Day 16](https://github.com/skaustubh04/verilog-practice/tree/main/day_016 "Link to dir") - Synchronous FIFO [[FIFO Guide (in SystemVerilog)](https://medium.com/@aiclab.official/fifo-design-and-implementation-tutorial-in-rtl-systemverilog-f11d4c78e3e8 "AICLAB: FIFO Design & Implementation")] <br>
     _Next day will also be in `Synchronous & Asynchronous Sequential Circuits` Section..._

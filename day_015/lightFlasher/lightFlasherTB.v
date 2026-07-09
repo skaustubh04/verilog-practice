@@ -35,8 +35,11 @@ module light_flasher_tb;
 		rst       = 1'b0;
 		flash_req = 1'b1;
 
+		@(negedge clk);
+		flash_req = 1'b0;
+
 		@(posedge clk);
-		#60;
+		#57;
 		$display ("\nSIM FIN");
 		$finish;
 	end
