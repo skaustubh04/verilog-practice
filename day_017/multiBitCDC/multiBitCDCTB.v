@@ -45,9 +45,9 @@ module multi_bit_cdc_tb;
 		$dumpvars (0, multi_bit_cdc_tb);
 
 		$display ("\nMULTI BIT CDC (OPEN LOOP CONFIG)\n");
-		$display (" wr_rst_n | rd_rst_n | wr_en | rd_en | empty | full | wr_data | rd_data ");
-		$display ("----------|----------|-------|-------|-------|------|---------|---------");
-		$monitor ("     %b     |     %b     |   %b   |   %b   |   %b   |   %b   | %0h | %0h ", wr_rst_n_i, rd_rst_n_i, wr_en_i, rd_en_i, empty_o, full_o, wr_data_i, rd_data_o);
+		$display (" wr_rst_n | rd_rst_n | wr_en | rd_en | empty | full | wr_data  | rd_data ");
+		$display ("----------|----------|-------|-------|-------|------|----------|----------");
+		$monitor ("     %b    |     %b    |   %b   |   %b   |   %b   |   %b  | %8h | %8h ", wr_rst_n_i, rd_rst_n_i, wr_en_i, rd_en_i, empty_o, full_o, wr_data_i, rd_data_o);
 
 		wr_rst_n_i = 1'b0;
 		rd_rst_n_i = 1'b0;
@@ -58,23 +58,45 @@ module multi_bit_cdc_tb;
 		@(negedge wr_clk_i);
 		wr_rst_n_i = 1'b1;
 		rd_rst_n_i = 1'b1;
-		wr_en_i    = 1'b1;
 
-		for (i=0; i<5; i++) begin
-			@(posedge wr_clk_i);
-			for (j=0; j<4; j++) begin
-				repeat(2) @(negedge wr_clk_i);
-				wr_data_i = $urandom_range (0, 2**(WIDTH-1)-1);
+		// -----------------------------------------------------------------------------
+		// seperating clock domains to avoid any irl hardware violations
+		// -----------------------------------------------------------------------------
+		fork
+			// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			// wr_clk_i controlled domain
+			// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			begin
+				@(negedge wr_clk_i);
+				wr_en_i = 1'b0;
 
-				if (j==0 & i==2) rd_en_i = 1'b1;
-				if (j==1 & i==2) rd_en_i = 1'b0;
-				if (j==2 & i==0) rd_en_i = 1'b1;
-				if (j==3 & i==0) wr_en_i = 1'b0;
-				if (j==3 & i==4) wr_en_i = 1'b1;
+				for (i=0; i<5; i++) begin
+					@(posedge wr_clk_i);
+					for (j=0; j<4; j++) begin
+						repeat(2) @(negedge wr_clk_i);
+						wr_data_i = $urandom_range (0, 2**(WIDTH-1)-1);
+
+						if (j==0 & i==1) wr_en_i = 1'b1;
+						if (j==3 & i==2) wr_en_i = 1'b0;
+						if (j==2 & i==3) wr_en_i = 1'b1;
+					end
+				end
 			end
 	
-			repeat(4) @(negedge wr_clk_i);
-		end
+			// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			// rd_clk_i controlled domain
+			// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+			begin
+				repeat(4) @(negedge rd_clk_i);
+				rd_en_i = 1'b1;
+
+				repeat(30) @(negedge rd_clk_i);
+				wr_en_i = 1'b0;
+
+				repeat(5) @(negedge rd_clk_i);
+				rd_en_i = 1'b0;
+			end
+		join	// this joined these 2 things such that they happen simultaneously
 
 		$display ("\nSIM FIN");
 		$finish;
