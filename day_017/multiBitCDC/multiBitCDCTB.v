@@ -60,7 +60,7 @@ module multi_bit_cdc_tb;
 		rd_rst_n_i = 1'b1;
 
 		// -----------------------------------------------------------------------------
-		// seperating clock domains to avoid any irl hardware violations
+		// separating clock domains to avoid any irl hardware violations
 		// -----------------------------------------------------------------------------
 		fork
 			// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

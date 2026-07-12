@@ -70,12 +70,14 @@ module multi_bit_cdc #(
 
 	// --------------------------------------------------------------------------------------
 	// dual flops using `always` block
+	// --------------------------------------------------------------------------------------
 	// these will be used to allow cdc of the gray-coded pointer values
 	// input to flop    -> gray-coded pointer values
 	// output from flop -> gray-coded synchronized pointer values
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-	// write flop
+	// flop controlled by clock on side of 'write' function
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	// this is used to synchronize the 'read' gray-coded pointers to its clock
 	always @(posedge wr_clk_i or negedge wr_rst_n_i) begin
 		if (!wr_rst_n_i) begin
 			g_rd_ptr_q    <= {(ADDR_WIDTH+1){1'b0}};
@@ -88,8 +90,9 @@ module multi_bit_cdc #(
 	end
 
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-	//read flop
+	// flop controlled by clock on side of 'read' domain
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+	// this is used to synchronize the 'write' gray-coded pointers to its clock
 	always @(posedge rd_clk_i or negedge rd_rst_n_i) begin
 		if (!rd_rst_n_i) begin
 			g_wr_ptr_q    <= {(ADDR_WIDTH+1){1'b0}};
