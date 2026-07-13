@@ -1,37 +1,37 @@
 /*
 *
 * TWO SIMULTANEOUSLY REQUIRED SIGNALS - CONSOLIDATING THE SIGNALS TO AVOID
-* MISMATCH DURING CDC (USING DUAL-F/F, OPEN-LOOP CONFIGURATION)
+* MISMATCH DURING CDC (USING TOGGLE SYNCHRONIZER, OPEN-LOOP CONFIGURATION)
 * 
 * THE DESIGN IS AS FOLLOWS:
-	* Clock domain 'A' will be used to only send the 'ld' and 'en' signals
-	  to the FIFO. The rest will be handled by the clock in domain 'B'.
-	* The FIFO requires 2 signals to be simultaneously HIGH for the data
-	  to be written to the FIFO. These inputs are 'wr_ld_i' and 'wr_en_i'.
-	* The data to be written to the FIFO, along with all other functions
-	  will be handled in clock domain 'B'.
-	* To handle this, and avoid any unintentional skew which might occur
-	  on any of the 2 signals, the signal which is sent from domain 'A'
-	  will be a single signal which will be synchrnoized using `toggle
-	  synchrnoizer` for clock domain crossing, and then that same signal
-	  will be sent to both 'ld' and 'en' inputs of the FIFO.
+*	* Clock domain 'A' will be used to only send the 'ld' and 'en' signals
+*	  to the FIFO. The rest will be handled by the clock in domain 'B'.
+*	* The FIFO requires 2 signals to be simultaneously HIGH for the data
+*	  to be written to the FIFO. These inputs are 'wr_ld_i' and 'wr_en_i'.
+*	* The data to be written to the FIFO, along with all other functions
+*	  will be handled in clock domain 'B'.
+*	* To handle this, and avoid any unintentional skew which might occur
+*	  on any of the 2 signals, the signal which is sent from domain 'A'
+*	  will be a single signal which will be synchrnoized using `toggle
+*	  synchrnoizer` for clock domain crossing, and then that same signal
+*	  will be sent to both 'ld' and 'en' inputs of the FIFO.
 *
 * DESIGN SPECIFICATIONS:
-	* clock domain 'A' operates at higher frequency than clock domain 'B'
-	* The data will be 4 bytes wide.
-	* The FIFO has a depth of 16.
-	* FIFO inputs and output:
-		* INPUTS ---
-			* clk_i	    ... (this will be fulfilled by `b_clk_i`)
-			* rst_n_i   ... (this will be fulfilled by `b_rst_n_i`)
-			* wr_ld_i   ... (this will be output of dual-f/fs)
-			* wr_en_i   ... (this will be output of dual-f/fs)
-			* wr_data_i
-			* rd_en_i
-		* OUTPUTS ---
-			* rd_data_o
-			* full_o
-			* empty_o
+*	* clock domain 'A' operates at higher frequency than clock domain 'B'
+*	* The data will be 4 bytes wide.
+*	* The FIFO has a depth of 16.
+*	* FIFO inputs and output:
+*		* INPUTS ---
+*			* clk_i	    ... (this will be fulfilled by `b_clk_i`)
+*			* rst_n_i   ... (this will be fulfilled by `b_rst_n_i`)
+*			* wr_ld_i   ... (this will be output of dual-f/fs)
+*			* wr_en_i   ... (this will be output of dual-f/fs)
+*			* wr_data_i
+*			* rd_en_i
+*		* OUTPUTS ---
+*			* rd_data_o
+*			* full_o
+*			* empty_o
 *
 */
 
@@ -140,7 +140,7 @@ module consolidate_cdc #(
 	// --------------------------------------------------------------------------------------
 	// storing data values inside FIFO (WRITE OPERATION)
 	// --------------------------------------------------------------------------------------
-	// since wr_ld_i = wr_en_i, in the condition for `else if`, I have
+	// since wr_ld_i = wr_en_i, in the condition for `else if` I have
 	// only included one of them.
 	always @(posedge b_clk_i or negedge b_rst_n_i) begin
 		if (!b_rst_n_i) begin
@@ -168,7 +168,7 @@ module consolidate_cdc #(
 	// --------------------------------------------------------------------------------------
 	// checking which operation happened last
 	// --------------------------------------------------------------------------------------
-	// since wr_ld_i = wr_en_i, in the condition for 2nd `else if` block,
+	// since wr_ld_i = wr_en_i, in the condition for 2nd `else if` block
 	// I have only included one of them.
 	always @(posedge b_clk_i or negedge b_rst_n_i) begin
 		if (!b_rst_n_i) begin
