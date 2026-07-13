@@ -24,7 +24,7 @@ Topics covered: <br>
     -> [Day 12](https://github.com/skaustubh04/verilog-practice/tree/main/day_012 "Link to dir") - Binary to Gray Code, Gray Code to Binary conversion <br>
     -> [Day 13](https://github.com/skaustubh04/verilog-practice/tree/main/day_013 "Link to dir") - SR-Latch, D-Latch, D-F/F <br>
 
-#### Day 14 to Day 17 - Synchronous & Asynchronous Sequential Circuits
+#### Day 14 to Day 18 - Synchronous & Asynchronous Sequential Circuits
 Topics covered: <br>
     -> [Day 14](https://github.com/skaustubh04/verilog-practice/tree/main/day_014 "Link to dir") - Moore & Mealy Machine: Consecutive 3 Ones Detector [[FSM](https://en.wikipedia.org/wiki/Finite-state_machine "FSM on Wikipedia")] [[Mealy](https://en.wikipedia.org/wiki/Moore_machine "Mealy Machine on Wikipedia")] [[Moore](https://en.wikipedia.org/wiki/Moore_machine "Moore Machine on Wikipedia")] <br>
     -> [Day 15](https://github.com/skaustubh04/verilog-practice/tree/main/day_015 "Link to dir") - Factored FSM: Light Flasher [COMPLETE], Traffic Light System [INCOMPLETE] <br>
