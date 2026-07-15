@@ -31,19 +31,19 @@ module true_dual_port_ram #(
 	parameter DEPTH      = 32,		// this many slots of width `WIDTH` inside RAM
 	parameter ADDR_WIDTH = $clog2 (DEPTH)	// to point to the slots inside RAM
 ) (
-	// -----------------------------------------------------------------------------------------
+	// ------------------------------------------------------------------------------------------
 	// clock and reset
 	input wire a_clk_i,	// clock for port 'A'
 	input wire b_clk_i,	// clock for port 'B'
 	input wire a_rst_n_i,	// active-low reset for port 'A'
 	input wire b_rst_n_i,	// active-low reset for port 'B'
-	// -----------------------------------------------------------------------------------------
+	// ------------------------------------------------------------------------------------------
 	// port 'A'
 	input wire 	            a_mode_i,		// write -> 0; read -> 1
 	input wire [WIDTH-1:0]      a_wr_data_i,	// "write" data i/p
 	input wire [ADDR_WIDTH-1:0] a_addr_i,		// shared address bus for "write" and "read"
 	output reg [WIDTH-1:0]	    a_rd_data_o,	// "read" data o/p
-	// -----------------------------------------------------------------------------------------
+	// ------------------------------------------------------------------------------------------
 	// port 'B'
 	input wire 		    b_mode_i,		// write -> 0; read -> 1
 	input wire [WIDTH-1:0] 	    b_wr_data_i,        // "write" data i/p
@@ -56,21 +56,13 @@ module true_dual_port_ram #(
 	reg [WIDTH-1:0] ram [0:DEPTH-1];
 
 	// -----------------------------------------------------
-	// port 'A'
+	// port 'A' (R/W)
 	// -----------------------------------------------------
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - -
-	// "write" logic for port 'A'
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	always @(posedge a_clk_i) begin
 		if (!a_mode_i) begin
 			ram[a_addr_i] <= a_wr_data_i;
 		end
-	end
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - -
-	// "read" logic for port 'A'
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - -
-	always @(posedge a_clk_i) begin
-		if (a_mode_i) begin
+		else begin
 			if (!a_rst_n_i) begin
 				a_rd_data_o <= {WIDTH{1'b0}};
 			end
@@ -81,21 +73,13 @@ module true_dual_port_ram #(
 	end
 
 	// -----------------------------------------------------
-	// port 'B'
+	// port 'B' (R/W)
 	// -----------------------------------------------------
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - -
-	// "write" logic for port 'B'
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	always @(posedge b_clk_i) begin
 		if (!b_mode_i) begin
 			ram[b_addr_i] <= b_wr_data_i;
 		end
-	end
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - -
-	// "read" logic for port 'B'
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - -
-	always @(posedge b_clk_i) begin
-		if (b_mode_i) begin
+		else begin
 			if (!b_rst_n_i) begin
 				b_rd_data_o <= {WIDTH{1'b0}};
 			end
