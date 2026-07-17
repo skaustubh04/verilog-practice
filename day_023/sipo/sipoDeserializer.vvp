@@ -1,0 +1,91 @@
+#! /usr/bin/vvp
+:ivl_version "13.0 (stable)" "(v13_0-dirty)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib/ivl/system.vpi";
+:vpi_module "/usr/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/ivl/va_math.vpi";
+S_0x55b93cc11bd0 .scope module, "sipo_deserializer" "sipo_deserializer" 2 3;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "clk_i";
+    .port_info 1 /INPUT 1 "rst_n_i";
+    .port_info 2 /INPUT 1 "wr_en_i";
+    .port_info 3 /INPUT 1 "wr_data_i";
+    .port_info 4 /OUTPUT 1 "valid_o";
+    .port_info 5 /OUTPUT 16 "rd_data_o";
+P_0x55b93cc10390 .param/l "WIDTH" 0 2 4, +C4<00000000000000000000000000010000>;
+P_0x55b93cc103d0 .param/l "WIDTH_BITS" 1 2 16, +C4<00000000000000000000000000000100>;
+o0x7fe679d71018 .functor BUFZ 1, c4<z>; HiZ drive
+v0x55b93cc11f00_0 .net "clk_i", 0 0, o0x7fe679d71018;  0 drivers
+v0x55b93cc37350_0 .var "counter", 3 0;
+v0x55b93cc37430_0 .var "rd_data_o", 15 0;
+o0x7fe679d710a8 .functor BUFZ 1, c4<z>; HiZ drive
+v0x55b93cc37520_0 .net "rst_n_i", 0 0, o0x7fe679d710a8;  0 drivers
+v0x55b93cc375e0_0 .var "shift_reg", 15 0;
+v0x55b93cc37710_0 .var "valid_o", 0 0;
+o0x7fe679d71138 .functor BUFZ 1, c4<z>; HiZ drive
+v0x55b93cc377d0_0 .net "wr_data_i", 0 0, o0x7fe679d71138;  0 drivers
+o0x7fe679d71168 .functor BUFZ 1, c4<z>; HiZ drive
+v0x55b93cc37890_0 .net "wr_en_i", 0 0, o0x7fe679d71168;  0 drivers
+E_0x55b93cc21c80/0 .event negedge, v0x55b93cc37520_0;
+E_0x55b93cc21c80/1 .event posedge, v0x55b93cc11f00_0;
+E_0x55b93cc21c80 .event/or E_0x55b93cc21c80/0, E_0x55b93cc21c80/1;
+    .scope S_0x55b93cc11bd0;
+T_0 ;
+    %wait E_0x55b93cc21c80;
+    %load/vec4 v0x55b93cc37520_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 16;
+    %assign/vec4 v0x55b93cc375e0_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x55b93cc37710_0, 0;
+    %pushi/vec4 0, 0, 4;
+    %assign/vec4 v0x55b93cc37350_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v0x55b93cc37890_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.2, 8;
+    %load/vec4 v0x55b93cc375e0_0;
+    %parti/s 15, 0, 2;
+    %load/vec4 v0x55b93cc377d0_0;
+    %concat/vec4; draw_concat_vec4
+    %assign/vec4 v0x55b93cc375e0_0, 0;
+    %load/vec4 v0x55b93cc37350_0;
+    %pad/u 32;
+    %cmpi/e 15, 0, 32;
+    %jmp/0xz  T_0.4, 4;
+    %pushi/vec4 0, 0, 4;
+    %assign/vec4 v0x55b93cc37350_0, 0;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v0x55b93cc37710_0, 0;
+    %load/vec4 v0x55b93cc375e0_0;
+    %parti/s 15, 0, 2;
+    %load/vec4 v0x55b93cc377d0_0;
+    %concat/vec4; draw_concat_vec4
+    %assign/vec4 v0x55b93cc37430_0, 0;
+    %jmp T_0.5;
+T_0.4 ;
+    %load/vec4 v0x55b93cc37350_0;
+    %addi 1, 0, 4;
+    %assign/vec4 v0x55b93cc37350_0, 0;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x55b93cc37710_0, 0;
+T_0.5 ;
+    %jmp T_0.3;
+T_0.2 ;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v0x55b93cc37710_0, 0;
+T_0.3 ;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "sipoDeserializer.v";
