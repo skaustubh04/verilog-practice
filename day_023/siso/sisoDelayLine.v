@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module siso_shift_reg #(
+module siso_delay_line #(
 	parameter WIDTH = 16
 ) (
 	input wire  clk_i,
