@@ -39,7 +39,7 @@ module morse_code #(
 	input wire  rst_n_i,	// active-low reset
 	input wire  wr_data_i,  // dot -> 1; dash -> 111
 	
-	output wire rd_out_o	// data read from shift reg
+	output wire rd_data_o	// data read from shift reg
 );
 
 	// -------------------------------------------
@@ -86,6 +86,6 @@ module morse_code #(
 
 	// -----------------------------------
 	// reading the MSB of shift reg as o/p
-	assign rd_out_o = shift_reg[WIDTH-1];  
+	assign rd_data_o = shift_reg[WIDTH-1];  
 
 endmodule
