@@ -37,7 +37,6 @@ module morse_code #(
 ) (
 	input wire  clk_i,	// i/p clock
 	input wire  rst_n_i,	// active-low reset
-	input wire  wr_data_i,  // dot -> 1; dash -> 111
 	
 	output wire rd_data_o	// data read from shift reg
 );
