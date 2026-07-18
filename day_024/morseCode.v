@@ -33,7 +33,8 @@
 `timescale 1ns / 1ps
 
 module morse_code #(
-	parameter WIDTH = 30
+	parameter WIDTH = 30,
+	parameter CYCLE_PER_BIT = 10_000_000
 ) (
 	input wire  clk_i,	// i/p clock
 	input wire  rst_n_i,	// active-low reset
@@ -41,10 +42,10 @@ module morse_code #(
 	output wire rd_data_o	// data read from shift reg
 );
 
-	// -------------------------------------------
+	// ----------------------------------------------
 	// no. of bits in counter
 	// for 10M clock cycles it will count up
-	localparam COUNTER_WIDTH = $clog2(10_000_000); 
+	localparam COUNTER_WIDTH = $clog2(CYCLE_PER_BIT);
 
 	// -----------------------------
 	// counter, pulse and shift reg
@@ -58,9 +59,9 @@ module morse_code #(
 		shift_reg <= 30'b0_1010101_000_1110101_000_101110101;
 	end
 
-	// ------------------------------------------------------------------
+	// -------------------------------------------------------------------
 	// logic to control o/p and `shift_reg`
-	// ------------------------------------------------------------------
+	// -------------------------------------------------------------------
 	always @(posedge clk_i or negedge rst_n_i) begin
 		if (!rst_n_i) begin
 			shift_reg  <= 30'b0_1010101_000_1110101_000_101110101;
