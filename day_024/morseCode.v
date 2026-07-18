@@ -11,8 +11,8 @@
 * length of 1 dot  -> 1 time unit
 * length of 1 dash -> 3 time units
 *
-* frequency of clock will be 100MHz, but `wr_en_i`
-* will be sent every 100ms (after 10M clock cycles)
+* frequency of clock will be 100MHz, but data will
+* be shifted every 100ms (after 10M clock cycles)
 *
 * The message which will be transmitted will be
 * the word "HDL" (or "hdl"), where
@@ -27,6 +27,17 @@
 * that whenever it is RESET the output isn't read
 * so quickly (can cause confusion due to prev/
 * on-going o/p)
+*
+* For an easier simulation, I am going to make some
+* changes:
+	* frequency of clock = 100MHz
+	* Cycles ratio       = 100
+* Cycles ratio being 100 means that data will be
+* shifted faster, to avoid long simulation times.
+* I couldn't open the `morseCodeTB.vcd` file since
+* it was too big (earlier).
+* Cycles ratio being 100 also implies that data in
+* shift reg will be shifted every 1us.
 *
 */
 
@@ -44,13 +55,13 @@ module morse_code #(
 	// -------------------------------------------
 	// no. of bits in counter
 	// for 10M clock cycles it will count up
-	localparam COUNTER_WIDTH = $clog2(10_000_000); 
+	localparam COUNTER_WIDTH = $clog2(100); 
 
 	// -----------------------------
 	// counter, pulse and shift reg
-	reg [COUNTER_WIDTH-1:0] counter;     // length log2(10M)
-	reg 			trigger_en;  // enables shifting in shift reg
+	reg [COUNTER_WIDTH-1:0] counter;     // length log2(100)
 	reg [WIDTH-1:0]         shift_reg;   // length 30
+	wire 			trigger_en;  // enables shifting in shift reg
 
 	// ----------------------------------------------------------
 	// initialting values in the register
@@ -65,26 +76,24 @@ module morse_code #(
 		if (!rst_n_i) begin
 			shift_reg  <= 30'b0_1010101_000_1110101_000_101110101;
 			counter    <= {COUNTER_WIDTH{1'b0}};
-			trigger_en <= 1'b0;
 		end
 		else begin
 			if (trigger_en) begin
 				shift_reg <= {shift_reg[WIDTH-2:0], 1'b0};
 			end
 			
-			if (counter == 10_000_000 - 1) begin
+			if (counter == 100 - 1) begin	// "100" is from cycles ratio
 				counter    <= {COUNTER_WIDTH{1'b0}};
-				trigger_en <= 1'b1;
 			end
 			else begin
 				counter    <= counter + 1'b1;
-				trigger_en <= 1'b0;
 			end
 		end
 	end
 
-	// -----------------------------------
-	// reading the MSB of shift reg as o/p
-	assign rd_data_o = shift_reg[WIDTH-1];  
+	// ------------------------------------------------------------
+	// reading the MSB of shift reg as o/p, and updating trigger_en
+	assign rd_data_o  = shift_reg[WIDTH-1];
+	assign trigger_en = (counter == 100-1);
 
 endmodule
