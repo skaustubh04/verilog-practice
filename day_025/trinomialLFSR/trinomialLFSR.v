@@ -9,21 +9,21 @@
 *
 */
 
-module trinomial_lfsr #(
-	parameter WIDTH = 7
-) (
+`timescale 1ns / 1ps
+
+module trinomial_lfsr (
 	input wire 	        clk_i,
 	input wire 	        rst_n_i,
-	output wire [WIDTH-1:0] lfsr_o
+	output wire [6:0] lfsr_o
 );
 
 	// -----------------------
 	// defining shift reg
-	reg [WIDTH-1:0] shift_reg;
+	reg [6:0] shift_reg;
 
 	always @(posedge clk_i or negedge rst_n_i) begin
 		if (!rst_n_i) begin
-			shift_reg <= {WIDTH{1'b1}};
+			shift_reg <= 7'b1;
 		end
 
 		else begin
