@@ -27,7 +27,7 @@ Topics covered: <br>
     -> [Day 12](https://github.com/skaustubh04/verilog-practice/tree/main/day_012 "Link to dir") - Binary to Gray Code, Gray Code to Binary conversion <br>
     -> [Day 13](https://github.com/skaustubh04/verilog-practice/tree/main/day_013 "Link to dir") - SR-Latch, D-Latch, D-F/F <br>
 
-#### Day 14 to Day 23 - Synchronous & Asynchronous Sequential Circuits
+#### Day 14 to Day 25 - Synchronous & Asynchronous Sequential Circuits
 Topics covered: <br>
     -> [Day 14](https://github.com/skaustubh04/verilog-practice/tree/main/day_014 "Link to dir") - Moore & Mealy Machine: Consecutive 3 Ones Detector [[FSM](https://en.wikipedia.org/wiki/Finite-state_machine "FSM on Wikipedia")] [[Mealy](https://en.wikipedia.org/wiki/Moore_machine "Mealy Machine on Wikipedia")] [[Moore](https://en.wikipedia.org/wiki/Moore_machine "Moore Machine on Wikipedia")] <br>
     -> [Day 15](https://github.com/skaustubh04/verilog-practice/tree/main/day_015 "Link to dir") - Factored FSM: Light Flasher [COMPLETE], Traffic Light System [INCOMPLETE] <br>
@@ -40,4 +40,5 @@ Topics covered: <br>
     -> [Day 22](https://github.com/skaustubh04/verilog-practice/tree/main/day_022 "Link to dir") - ROM Designs: Single Port, Dual Port [[AMD: PG326](https://docs.amd.com/r/en-US/pg326-embedded-memory-generator/Memory-Type "Link to Guidebook")] [[D. Mangum](https://danielmangum.com/posts/when-vivado-infer-bram/ "Link to Blog")]<br>
     -> [Day 23](https://github.com/skaustubh04/verilog-practice/tree/main/day_023 "Link to dir") - Shift Register: SISO, SIPO, PISO, PIPO [[Shift Registers](https://ecrionix.org/digital-electronics/siso-sipo-piso-pipo/ "Learn about their verilog code")] <br>
     -> [Day 24](https://github.com/skaustubh04/verilog-practice/tree/main/day_024 "Link to dir") - Shift Register (SISO): Morse Code [[Morse Code on FPGA](https://www.jetir.org/papers/JETIR2508181.pdf "Link to paper")] <br>
+    -> [Day 25](https://github.com/skaustubh04/verilog-practice/tree/main/day_025 "Link to dir") - LFSR: Trinomial & Pentanomial [[LFSR](https://www.geeksforgeeks.org/digital-logic/linear-feedback-shift-registers-lfsr/ "Link to article")] <br>
     _Next day will also be in `Synchronous & Asynchronous Sequential Circuits` Section..._
