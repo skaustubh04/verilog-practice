@@ -1,0 +1,150 @@
+$date
+	Tue Jul 21 00:08:50 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module universal_shift_reg_tb $end
+$var wire 1 ! s_right_o $end
+$var wire 1 " s_left_o $end
+$var wire 4 # p_data_o [3:0] $end
+$var parameter 32 $ WIDTH $end
+$var reg 1 % clk_i $end
+$var reg 4 & p_data_i [3:0] $end
+$var reg 1 ' rst_n_i $end
+$var reg 1 ( s_left_i $end
+$var reg 1 ) s_right_i $end
+$var reg 2 * sel_i [1:0] $end
+$var reg 1 + wr_en_i $end
+$var integer 32 , i [31:0] $end
+$scope module uut $end
+$var wire 1 % clk_i $end
+$var wire 4 - p_data_i [3:0] $end
+$var wire 1 ' rst_n_i $end
+$var wire 1 ( s_left_i $end
+$var wire 1 ) s_right_i $end
+$var wire 2 . sel_i [1:0] $end
+$var wire 1 + wr_en_i $end
+$var wire 1 ! s_right_o $end
+$var wire 1 " s_left_o $end
+$var parameter 2 / DATA_HOLD $end
+$var parameter 2 0 PARALLEL_LOAD $end
+$var parameter 2 1 SHIFT_LEFT $end
+$var parameter 2 2 SHIFT_RIGHT $end
+$var parameter 32 3 WIDTH $end
+$var reg 4 4 p_data_o [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100 3
+b1 2
+b10 1
+b11 0
+b0 /
+b100 $
+$end
+#0
+$dumpvars
+b0 4
+bx .
+b0 -
+bx ,
+0+
+bx *
+0)
+0(
+0'
+b0 &
+0%
+b0 #
+0"
+0!
+$end
+#5000
+1%
+#10000
+1(
+b10 *
+b10 .
+1'
+0%
+#15000
+1%
+#20000
+0%
+#25000
+1%
+#30000
+b0 ,
+1+
+0%
+#35000
+1!
+b1 #
+b1 4
+1%
+#40000
+0%
+#45000
+b11 #
+b11 4
+1%
+#50000
+b1 ,
+b11 *
+b11 .
+b100 &
+b100 -
+0%
+#55000
+0!
+b100 #
+b100 4
+1%
+#60000
+0%
+#65000
+1%
+#70000
+b10 ,
+b10 &
+b10 -
+0%
+#75000
+b10 #
+b10 4
+1%
+#80000
+0%
+#85000
+1%
+#90000
+b1 *
+b1 .
+0%
+#95000
+1!
+b1 #
+b1 4
+1%
+#100000
+0%
+#105000
+0!
+b0 #
+b0 4
+1%
+#110000
+b0 *
+b0 .
+0%
+#115000
+1%
+#120000
+0%
+#123000
